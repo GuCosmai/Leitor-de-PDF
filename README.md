@@ -1,18 +1,38 @@
-## Getting Started
+## Getting Started - Leitor de Apólices SICS
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um leitor de PDFs de apólices, endossos e propostas de seguros. Extrai automaticamente dados principais como número da apólice, segurado, datas e valores.
 
-## Folder Structure
+## Estrutura do Projeto
 
-The workspace contains two folders by default, where:
+O workspace contém:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `src`: Código-fonte
+  - `models/`: Classes Apolice e Segurado
+  - `services/`: PDFReaderService e ApoliceExtratorService  
+  - `parsers/`: ApoliceParser para extração
+- `lib`: Dependências (PDFBox 2.0.27)
+- `bin`: Arquivos compilados
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Como Usar
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. Abra o arquivo App.java e clique em "Run"
+2. Ou execute: `java -cp "bin;lib\pdfbox-2.0.27.jar" App`
+3. Selecione opção 1 e forneça o caminho completo do PDF
+4. Os dados serão extraídos e exibidos
 
-## Dependency Management
+## Dados Extraídos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Número da apólice
+- Tipo (Apólice/Endosso/Proposta)
+- Seguradora
+- Nome e CPF/CNPJ do segurado
+- Datas de vigência
+- Prêmio
+- Email
+
+## Próximos Passos
+
+1. Integração com banco de dados
+2. Parsers específicos por seguradora
+3. API REST para integração
+4. Suporte a PDF com imagens (OCR)
