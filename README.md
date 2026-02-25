@@ -1,4 +1,4 @@
-## Getting Started - Leitor de Apólices SICS
+## Getting Started - Leitor de Apólices 
 
 Este é um leitor de PDFs de apólices, endossos e propostas de seguros. Extrai automaticamente dados principais como número da apólice, segurado, datas e valores.
 
